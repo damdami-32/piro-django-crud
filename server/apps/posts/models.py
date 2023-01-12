@@ -1,7 +1,7 @@
 from django.db import models
 
-class Post(models):
-    title = models.CharField(max_length=32)
+class Post(models.Model):
+    title = models.CharField(max_length=64)
     user = models.CharField(max_length=32)
     content = models.TextField()
     region = models.CharField(max_length=16)
@@ -9,3 +9,4 @@ class Post(models):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
