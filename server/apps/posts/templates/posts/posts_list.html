@@ -1,0 +1,12 @@
+<form action="/" method="get">
+    <input name="text" placeholder="검색하기" />
+</form>
+
+<a href="/posts/create">글 작성하러 가기 ✏️</a>
+<hr />
+
+{% for post in posts %}
+<p><a href="/posts/{{ post.pk }}">{{post.title}}</a></p>
+<small>지역: {{post.region}}</small>
+<hr />
+{% endfor %}

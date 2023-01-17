@@ -1,0 +1,18 @@
+<h1>글 수정하기</h1>
+
+<form action="/posts/{{ post.id }}/update" method="post">
+    {% csrf_token %}
+    <input name="title" placeholder="게시글 제목" value="{{ post.title }}" />
+    <br />
+    <input name="user" placeholder="작성자" value="{{ post.user }}" />
+    <br />
+    <input name="region" placeholder="지역" value="{{ post.region }}" />
+    <br />
+    <input name="price" placeholder="가격" type="number" value="{{ post.price }}" />
+    <br />
+    <textarea name="content" placeholder="게시글 내용" {{ post.content }}></textarea>
+    <div>
+        <input type="submit" value="저장하기"/>
+    </div>
+
+</form>

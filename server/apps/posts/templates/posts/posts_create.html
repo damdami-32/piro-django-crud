@@ -1,0 +1,18 @@
+<h1>글 작성하기</h1>
+
+<form action="/posts/create" method="post">
+    {% csrf_token %}
+    <input name="title" placeholder="게시글 제목" />
+    <br />
+    <input name="user" placeholder="작성자" />
+    <br />
+    <input name="region" placeholder="지역" />
+    <br />
+    <input name="price" placeholder="가격" type="number" />
+    <br />
+    <textarea name="content" placeholder="게시글 내용"></textarea>
+    <div>
+        <input type="submit" value="저장하기"/>
+    </div>
+
+</form>
